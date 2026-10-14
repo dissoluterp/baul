@@ -24,7 +24,7 @@
 .mpb-nav label{flex:0 0 40px;height:32px;border-radius:6px;background:var(--soft);color:var(--dk);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:15px;transition:.2s}
 .mpb-nav label:hover{background:var(--ac);color:var(--on)}
 .mpb .mpb-nav i{color:inherit}
-.mpb-view{position:relative;margin-top:10px;height:490px;background:var(--b1);border:var(--border1,1px solid #ececec);border-radius:10px;padding:16px;overflow:hidden}
+.mpb-view{position:relative;margin-top:10px;height:456px;background:var(--b1);border:var(--border1,1px solid #ececec);border-radius:10px;padding:16px;overflow:hidden}
 .mpb-view::before{content:'';position:absolute;width:150px;height:150px;border-radius:50%;background:var(--b2);right:-40px;top:-30px}
 .mpb-view::after{content:'';position:absolute;width:130px;height:130px;border-radius:50%;background:var(--b2);right:-30px;bottom:-60px}
 .mpb-p{display:none;position:relative;z-index:1}
@@ -42,7 +42,7 @@
 .mpb-chips{display:flex;flex-wrap:wrap;gap:5px;margin-top:10px}
 .mpb-chips span{background:var(--b2);border:var(--border1,1px solid #e3e9ef);border-radius:20px;padding:2px 10px;font-size:10.5px}
 .mpb .mpb-chips b{color:var(--ac)!important}
-.mpb-list{max-height:400px;overflow:auto;padding-right:2px}
+.mpb-list{max-height:360px;overflow:auto;padding-right:2px}
 .mpb-item{display:flex;align-items:center;gap:10px;padding:8px 10px;margin-bottom:6px;background:var(--b1);border:var(--border1,1px solid #e3e9ef);border-radius:8px}
 .mpb-item>div{flex:1;min-width:0}
 .mpb .mpb-item a{display:block;font-weight:700;font-size:12px;color:var(--tt)!important;text-decoration:none!important}
