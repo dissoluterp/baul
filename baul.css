@@ -14,10 +14,8 @@
 .mpb-photo img{display:block;flex:1;width:100%;min-width:0;min-height:230px;object-fit:cover;border-radius:6px}
 .mpb-soc{display:flex;gap:6px;margin-top:10px}
 .mpb-soc+.mpb-soc{margin-top:6px}
-.mpb .mpb-soc a{flex:1;height:30px;border-radius:6px;display:flex;align-items:center;justify-content:center;background:var(--g1);color:var(--on)!important;text-decoration:none!important;font-size:14px;transition:.2s}
-.mpb .mpb-soc a:nth-child(2){background:var(--ac)}
-.mpb .mpb-soc a:nth-child(3){background:var(--dk)}
-.mpb .mpb-soc a:hover{background:var(--g2)}
+.mpb .mpb-soc a{flex:1;height:30px;border-radius:6px;display:flex;align-items:center;justify-content:center;background:var(--gh);color:var(--on)!important;text-decoration:none!important;font-size:14px;transition:.2s}
+.mpb .mpb-soc a:hover{filter:brightness(1.1)}
 .mpb-right{flex:1;min-width:0}
 .mpb-nav{display:flex;gap:6px}
 .mpb-nav label{flex:0 0 40px;height:32px;border-radius:6px;background:var(--soft);color:var(--dk);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:15px;transition:.2s}
@@ -27,7 +25,7 @@
 .mpb-view::before{content:'';position:absolute;width:150px;height:150px;border-radius:50%;background:var(--b2);right:-40px;top:-30px}
 .mpb-view::after{content:'';position:absolute;width:130px;height:130px;border-radius:50%;background:var(--b2);right:-30px;bottom:-60px}
 .mpb-p{display:none;position:relative;z-index:1}
-.mpb-h{margin:0 0 10px;padding-bottom:6px;border-bottom:var(--border1,1px solid #e3e9ef);font-family:var(--f-deco,'Playfair Display SC',serif);font-weight:900;font-size:22px;line-height:1.1;text-transform:lowercase;letter-spacing:0;color:var(--tt)}
+.mpb-h{margin:0 0 10px;padding-bottom:6px;border-bottom:var(--border1,1px solid #e3e9ef);font-family:var(--f-deco,'Playfair Display SC',serif);font-weight:900;font-size:28px;line-height:1.1;text-transform:lowercase;letter-spacing:0;color:var(--tt)}
 .mpb-p p{margin:0 0 8px;font-size:12px}
 .mpb .mpb-about{flex:1;min-height:0;overflow-y:auto;padding-right:8px;scrollbar-width:thin;scrollbar-color:var(--scroll-thumb,var(--dk)) transparent}
 .mpb-about p:last-child{margin-bottom:0}
@@ -52,7 +50,7 @@
 .mpb-chars,.mpb-cards,.mpb-list{scrollbar-width:thin;scrollbar-color:var(--scroll-thumb,var(--dk)) transparent}
 .mpb-chars::-webkit-scrollbar,.mpb-cards::-webkit-scrollbar,.mpb-list::-webkit-scrollbar{width:4px}
 .mpb-chars::-webkit-scrollbar-thumb,.mpb-cards::-webkit-scrollbar-thumb,.mpb-list::-webkit-scrollbar-thumb{background:var(--scroll-thumb,var(--dk));border-radius:4px}
-.mpb-cname{margin-bottom:8px;font-family:var(--f-deco,'Playfair Display SC',serif);font-weight:900;font-size:20px;line-height:1.1;text-transform:lowercase;color:var(--tt)}
+.mpb-cname{margin-bottom:8px;font-family:var(--f-deco,'Playfair Display SC',serif);font-weight:900;font-size:24px;line-height:1.1;text-transform:lowercase;color:var(--tt)}
 #mpb-t1:checked~.mpb-body .mpb-p1,#mpb-t2:checked~.mpb-body .mpb-p2,#mpb-t3:checked~.mpb-body .mpb-p3,#mpb-t4:checked~.mpb-body .mpb-p4{display:block}
 #mpb-t1:checked~.mpb-body [for="mpb-t1"],#mpb-t2:checked~.mpb-body [for="mpb-t2"],#mpb-t3:checked~.mpb-body [for="mpb-t3"],#mpb-t4:checked~.mpb-body [for="mpb-t4"]{background:var(--gd);color:var(--on)}
 #mpb-t1:checked~.mpb-body .mpb-p1{display:flex;flex-direction:column;height:100%}
@@ -98,9 +96,9 @@
 .mpb-tr{--i:"\f0c0";--l:"Trama con"}
 
 /* Spotify */
-.mpb .mpb-song{display:block;margin-top:8px;padding:7px 10px;border-radius:8px;background:var(--soft);color:var(--tt)!important;text-decoration:none!important;font-size:11px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.mpb .mpb-song{display:block;margin-top:8px;padding:7px 10px;border-radius:8px;background:var(--gh);color:var(--on)!important;text-decoration:none!important;font-size:11px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;transition:.2s}
+.mpb-song:hover{filter:brightness(1.1);color:var(--on)!important}
 .mpb-song::before{content:"\f1bc";font:400 13px var(--fb);margin-right:8px}
-.mpb-song:hover{background:var(--ac);color:var(--on)!important}
 .mpb-pls{display:flex;gap:6px;margin-top:6px}
 .mpb .mpb-pls .mpb-song{flex:1;min-width:0;margin-top:0;padding:6px 10px}
 
