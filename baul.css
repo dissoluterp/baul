@@ -18,7 +18,7 @@
 .mpb .mpb-soc a:hover{background:var(--gd);border-color:transparent;color:var(--on)!important}
 .mpb-right{flex:1;min-width:0}
 .mpb-nav{display:flex;gap:6px}
-.mpb-nav label{flex:0 0 40px;height:32px;border-radius:6px;background:var(--soft);color:var(--dk);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:15px;transition:.2s}
+.mpb-nav label{flex:0 0 40px;height:32px;border-radius:6px;background:#f8f8f8;border:var(--border1,1px solid #e3e9ef);color:var(--dk);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:15px;transition:.2s}
 .mpb-nav label:hover{background:var(--gd);color:var(--on)}
 .mpb .mpb-nav i{color:inherit}
 .mpb-view{position:relative;margin-top:10px;height:490px;background:var(--b1);border:var(--border1,1px solid #ececec);border-radius:10px;padding:16px;overflow:hidden}
