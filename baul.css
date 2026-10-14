@@ -49,9 +49,9 @@
 .mpb-item small{display:block;font-size:10.5px;color:var(--tx)}
 .mpb .mpb-item>i{color:var(--ac)}
 .mpb-tag{flex:none;padding:1px 8px;border-radius:20px;background:var(--soft);color:var(--dk);font-family:var(--f-mono,inherit);font-size:9.5px;text-transform:uppercase;letter-spacing:.5px}
-.mpb-chars,.mpb-list{scrollbar-width:thin;scrollbar-color:var(--scroll-thumb,var(--dk)) transparent}
-.mpb-chars::-webkit-scrollbar,.mpb-list::-webkit-scrollbar{width:4px}
-.mpb-chars::-webkit-scrollbar-thumb,.mpb-list::-webkit-scrollbar-thumb{background:var(--scroll-thumb,var(--dk));border-radius:4px}
+.mpb-chars,.mpb-cards,.mpb-list{scrollbar-width:thin;scrollbar-color:var(--scroll-thumb,var(--dk)) transparent}
+.mpb-chars::-webkit-scrollbar,.mpb-cards::-webkit-scrollbar,.mpb-list::-webkit-scrollbar{width:4px}
+.mpb-chars::-webkit-scrollbar-thumb,.mpb-cards::-webkit-scrollbar-thumb,.mpb-list::-webkit-scrollbar-thumb{background:var(--scroll-thumb,var(--dk));border-radius:4px}
 .mpb-cname{margin-bottom:8px;font-family:var(--f-deco,'Playfair Display SC',serif);font-weight:900;font-size:20px;line-height:1.1;text-transform:lowercase;color:var(--tt)}
 #mpb-t1:checked~.mpb-body .mpb-p1,#mpb-t2:checked~.mpb-body .mpb-p2,#mpb-t3:checked~.mpb-body .mpb-p3,#mpb-t4:checked~.mpb-body .mpb-p4{display:block}
 #mpb-t1:checked~.mpb-body [for="mpb-t1"],#mpb-t2:checked~.mpb-body [for="mpb-t2"],#mpb-t3:checked~.mpb-body [for="mpb-t3"],#mpb-t4:checked~.mpb-body [for="mpb-t4"]{background:var(--gd);color:var(--on)}
@@ -61,7 +61,7 @@
 #mpb-t2:checked~.mpb-body .mpb-p2{display:flex;flex-direction:column;height:100%}
 @media(max-width:560px){.mpb-body{flex-direction:column;padding:16px}.mpb-left{flex:none;width:210px;margin:0 auto}.mpb-ico{flex-basis:30%}.mpb-nav label{flex:1}}
 
-/* ===== NUEVO: fuentes de iconos (Font Awesome 5 y 6) ===== */
+/* ===== Iconos ===== */
 .mpb{--fa:"Font Awesome 6 Free","Font Awesome 5 Free","Font Awesome 6 Pro","Font Awesome 5 Pro","FontAwesome";--fb:"Font Awesome 6 Brands","Font Awesome 5 Brands"}
 
 /* Redes: el icono sale de la URL */
@@ -73,17 +73,17 @@
 .mpb .mpb-soc a[href*="pinterest"]::before{content:"\f231"}
 .mpb .mpb-soc a:is([href*="instagram"],[href*="discord"],[href*="tumblr"],[href*="spotify"],[href*="pinterest"])::before{font-family:var(--fb);font-weight:400}
 
-/* Personajes: un bloque por personaje, sin ids */
+/* ===== Personajes: miniaturas con scroll, ficha fija debajo ===== */
 .mpb-p2 .mpb-h{flex:none}
-.mpb-c{display:contents}
+.mpb-chars{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;align-content:start;flex:none;max-height:140px;overflow-y:auto;padding:2px 4px 2px 2px}
 .mpb-ch{display:block;height:64px;border-radius:14px;overflow:hidden;border:2px solid var(--soft);cursor:pointer;opacity:.75;transition:.2s}
 .mpb-ch img{display:block;width:100%;height:100%;object-fit:cover}
-.mpb-ch:hover,.mpb-ch:has(input:checked){opacity:1}
-.mpb-ch:has(input:checked){border-color:var(--ac)}
-.mpb-chars{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;align-content:start;max-height:150px;flex:none;overflow-y:auto;padding:2px 4px 2px 2px}
-.mpb-card{display:none;margin-top:6px;padding-top:8px;border-top:1px dashed var(--ac)}
-.mpb-cards{flex:1;min-height:0;overflow-y:auto}
-.mpb-cards:has(.mpb-c input:checked)>.mpb-card{display:none}
+.mpb-ch:hover{opacity:1}
+.mpb-cards{flex:1;min-height:0;overflow-y:auto;margin-top:8px;padding-top:8px;border-top:1px dashed var(--ac)}
+.mpb-card{display:none}
+
+#mpb-c0:checked~.mpb-cards .mpb-card0,#mpb-c1:checked~.mpb-cards .mpb-card1,#mpb-c2:checked~.mpb-cards .mpb-card2,#mpb-c3:checked~.mpb-cards .mpb-card3,#mpb-c4:checked~.mpb-cards .mpb-card4,#mpb-c5:checked~.mpb-cards .mpb-card5,#mpb-c6:checked~.mpb-cards .mpb-card6,#mpb-c7:checked~.mpb-cards .mpb-card7,#mpb-c8:checked~.mpb-cards .mpb-card8,#mpb-c9:checked~.mpb-cards .mpb-card9,#mpb-c10:checked~.mpb-cards .mpb-card10,#mpb-c11:checked~.mpb-cards .mpb-card11{display:block}
+#mpb-c0:checked~.mpb-chars [for="mpb-c0"],#mpb-c1:checked~.mpb-chars [for="mpb-c1"],#mpb-c2:checked~.mpb-chars [for="mpb-c2"],#mpb-c3:checked~.mpb-chars [for="mpb-c3"],#mpb-c4:checked~.mpb-chars [for="mpb-c4"],#mpb-c5:checked~.mpb-chars [for="mpb-c5"],#mpb-c6:checked~.mpb-chars [for="mpb-c6"],#mpb-c7:checked~.mpb-chars [for="mpb-c7"],#mpb-c8:checked~.mpb-chars [for="mpb-c8"],#mpb-c9:checked~.mpb-chars [for="mpb-c9"],#mpb-c10:checked~.mpb-chars [for="mpb-c10"],#mpb-c11:checked~.mpb-chars [for="mpb-c11"]{border-color:var(--ac);opacity:1}
 
 /* Filas de la ficha: icono y etiqueta salen de la clase */
 .mpb-r{display:flex;align-items:center;gap:8px;padding:2px 0;border-bottom:var(--border1,1px solid #f3f5f8);font-size:11.5px}
