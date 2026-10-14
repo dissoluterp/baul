@@ -65,13 +65,15 @@
 .mpb{--fa:"Font Awesome 6 Free","Font Awesome 5 Free","Font Awesome 6 Pro","Font Awesome 5 Pro","FontAwesome";--fb:"Font Awesome 6 Brands","Font Awesome 5 Brands"}
 
 /* Redes: el icono sale de la URL */
-:before{content:"\f0c1";font:900 14px var(--fa)}
+.mpb .mpb-soc a::before{content:"\f0c1";font:900 14px var(--fa)}
 .mpb .mpb-soc a[href*="instagram"]::before{content:"\f16d"}
 .mpb .mpb-soc a[href*="discord"]::before{content:"\f392"}
 .mpb .mpb-soc a[href*="tumblr"]::before{content:"\f173"}
 .mpb .mpb-soc a[href*="spotify"]::before{content:"\f1bc"}
 .mpb .mpb-soc a[href*="pinterest"]::before{content:"\f231"}
-is([href*="instagram"],[href*="discord"],[href*="tumblr"],[href*="spotify"],[href*="pinterest"])::before{font-family:var(--fb);font-weight:400}
+.mpb .mpb-soc a:is([href*="instagram"],[href*="discord"],[href*="tumblr"],[href*="spotify"],[href*="pinterest"])::before{font-family:var(--fb);font-weight:400}
+.mpb .mpb-soc a:has(i)::before{content:none!important}
+.mpb .mpb-soc i{color:inherit;font-size:14px}
 
 /* ===== Personajes: miniaturas con scroll, ficha fija debajo ===== */
 .mpb-p2 .mpb-h{flex:none}
