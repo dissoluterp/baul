@@ -64,12 +64,12 @@
 .mpb-p2{overflow:hidden}
 
 /* Panel Temas (2 tandas): las listas se reparten el alto y hacen scroll */
-.mpb-dos .mpb-h{font-size:22px;margin-bottom:8px;flex:none}
+.mpb-dos .mpb-h{font-size:24px;margin-bottom:8px;padding-top: 10px !important;flex:none}
 .mpb-dos .mpb-list{flex:1 1 0;min-height:0;max-height:none}
 .mpb-dos .mpb-list+.mpb-h{margin-top:12px}
 
 /* Panel reloj (3 tandas): igual, reparto equitativo */
-.mpb-p5 .mpb-h{font-size:18px;margin-bottom:6px;padding-bottom:4px;flex:none}
+.mpb-p5 .mpb-h{font-size:24px;margin-bottom:6px;padding-bottom:4px;padding-top: 10px !important;flex:none}
 .mpb-p5 .mpb-list{flex:1 1 0;min-height:0;max-height:none}
 .mpb-p5 .mpb-list+.mpb-h{margin-top:12px}
 .mpb-p5 .mpb-item{padding:5px 10px;margin-bottom:4px}
