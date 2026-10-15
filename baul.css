@@ -55,24 +55,24 @@
 
 /* ===== Pestañas ===== */
 #mpb-t1:checked~.mpb-body .mpb-p1{display:flex;flex-direction:column;height:100%}
-#mpb-t3:checked~.mpb-body .mpb-p3,#mpb-t4:checked~.mpb-body .mpb-p4,#mpb-t5:checked~.mpb-body .mpb-p5{display:block}
+#mpb-t3:checked~.mpb-body .mpb-p3,#mpb-t5:checked~.mpb-body .mpb-p5{display:flex;flex-direction:column;height:100%}
+#mpb-t4:checked~.mpb-body .mpb-p4{display:block}
 :is(#mpb-cx,#mpb-c0,#mpb-c1,#mpb-c2,#mpb-c3,#mpb-c4,#mpb-c5,#mpb-c6,#mpb-c7,#mpb-c8,#mpb-c9,#mpb-c10,#mpb-c11):checked~.mpb-body .mpb-p2{display:flex;flex-direction:column;height:100%}
 #mpb-t1:checked~.mpb-body [for="mpb-t1"],#mpb-t3:checked~.mpb-body [for="mpb-t3"],#mpb-t4:checked~.mpb-body [for="mpb-t4"],#mpb-t5:checked~.mpb-body [for="mpb-t5"]{background:var(--gd);color:var(--on);border-color:transparent}
 :is(#mpb-cx,#mpb-c0,#mpb-c1,#mpb-c2,#mpb-c3,#mpb-c4,#mpb-c5,#mpb-c6,#mpb-c7,#mpb-c8,#mpb-c9,#mpb-c10,#mpb-c11):checked~.mpb-body [for="mpb-cx"]{background:var(--gd);color:var(--on);border-color:transparent}
 .mpb-p1 .mpb-h,.mpb-p1 .mpb-quote,.mpb-p1 .mpb-chips{flex:none}
 .mpb-p2{overflow:hidden}
 
-/* Panel Temas (2 tandas, 3 tarjetas cada una) */
-.mpb-dos .mpb-h{font-size:22px;margin-bottom:8px}
-.mpb-dos .mpb-list{max-height:177px}
-.mpb-dos .mpb-list+.mpb-h{margin-top:14px}
+/* Panel Temas (2 tandas): las listas se reparten el alto y hacen scroll */
+.mpb-dos .mpb-h{font-size:22px;margin-bottom:8px;flex:none}
+.mpb-dos .mpb-list{flex:1 1 0;min-height:0;max-height:none}
+.mpb-dos .mpb-list+.mpb-h{margin-top:12px}
 
-/* Panel reloj (3 tandas, 2 tarjetas cada una) */
-.mpb-p5 .mpb-h{font-size:18px;margin-bottom:6px;padding-bottom:4px}
-.mpb-p5 .mpb-list{max-height:104px}
-.mpb-p5 .mpb-list+.mpb-h{margin-top:10px}
+/* Panel reloj (3 tandas): igual, reparto equitativo */
+.mpb-p5 .mpb-h{font-size:18px;margin-bottom:6px;padding-bottom:4px;flex:none}
+.mpb-p5 .mpb-list{flex:1 1 0;min-height:0;max-height:none}
+.mpb-p5 .mpb-list+.mpb-h{margin-top:12px}
 .mpb-p5 .mpb-item{padding:5px 10px;margin-bottom:4px}
-@media(max-width:560px){.mpb-body{flex-direction:column;padding:16px}.mpb-left{flex:none;width:210px;margin:0 auto}.mpb-ico{flex-basis:30%}.mpb-nav label{flex:1}}
 
 /* ===== Iconos ===== */
 .mpb{--fa:"Font Awesome 6 Free","Font Awesome 5 Free","Font Awesome 6 Pro","Font Awesome 5 Pro","FontAwesome";--fb:"Font Awesome 6 Brands","Font Awesome 5 Brands"}
