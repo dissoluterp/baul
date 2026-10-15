@@ -62,7 +62,8 @@
 .mpb-p1 .mpb-h,.mpb-p1 .mpb-quote,.mpb-p1 .mpb-chips{flex:none}
 .mpb-p2{overflow:hidden}
 .mpb-p5 .mpb-list{max-height:150px}
-.mpb-p5 .mpb-list+.mpb-h{margin-top:30px}
+.mpb-p5 .mpb-list:first-of-type{margin-bottom:22px}
+.mpb-p5 .mpb-list+.mpb-h{margin-top:0}
 @media(max-width:560px){.mpb-body{flex-direction:column;padding:16px}.mpb-left{flex:none;width:210px;margin:0 auto}.mpb-ico{flex-basis:30%}.mpb-nav label{flex:1}}
 
 /* ===== Iconos ===== */
