@@ -61,6 +61,13 @@
 :is(#mpb-cx,#mpb-c0,#mpb-c1,#mpb-c2,#mpb-c3,#mpb-c4,#mpb-c5,#mpb-c6,#mpb-c7,#mpb-c8,#mpb-c9,#mpb-c10,#mpb-c11):checked~.mpb-body [for="mpb-cx"]{background:var(--gd);color:var(--on);border-color:transparent}
 .mpb-p1 .mpb-h,.mpb-p1 .mpb-quote,.mpb-p1 .mpb-chips{flex:none}
 .mpb-p2{overflow:hidden}
+
+/* Panel Temas (2 tandas, 3 tarjetas cada una) */
+.mpb-dos .mpb-h{font-size:22px;margin-bottom:8px}
+.mpb-dos .mpb-list{max-height:177px}
+.mpb-dos .mpb-list+.mpb-h{margin-top:14px}
+
+/* Panel reloj (3 tandas, 2 tarjetas cada una) */
 .mpb-p5 .mpb-h{font-size:18px;margin-bottom:6px;padding-bottom:4px}
 .mpb-p5 .mpb-list{max-height:104px}
 .mpb-p5 .mpb-list+.mpb-h{margin-top:10px}
