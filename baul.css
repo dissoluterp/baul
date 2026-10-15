@@ -17,8 +17,6 @@
 .mpb-soc+.mpb-soc{margin-top:6px}
 .mpb .mpb-soc a{flex:1;height:30px;border-radius:6px;display:flex;align-items:center;justify-content:center;background:#f8f8f8;border:var(--border1,1px solid #e3e9ef);color:var(--dk)!important;text-decoration:none!important;font-size:14px;transition:.2s}
 .mpb .mpb-soc a:hover{background:var(--gd);border-color:transparent;color:var(--on)!important}
-.mpb .mpb-soc a:has(i)::before{content:none!important}
-.mpb .mpb-soc i{color:inherit;font-size:14px}
 .mpb-right{flex:1;min-width:0}
 .mpb-nav{display:flex;gap:6px}
 .mpb-nav label{flex:0 0 40px;height:32px;border-radius:6px;background:#f8f8f8;border:var(--border1,1px solid #e3e9ef);color:var(--dk);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:15px;transition:.2s}
@@ -54,16 +52,15 @@
 .mpb-chars::-webkit-scrollbar,.mpb-cards::-webkit-scrollbar,.mpb-list::-webkit-scrollbar{width:4px}
 .mpb-chars::-webkit-scrollbar-thumb,.mpb-cards::-webkit-scrollbar-thumb,.mpb-list::-webkit-scrollbar-thumb{background:var(--scroll-thumb,var(--dk));border-radius:4px}
 .mpb-cname{margin-bottom:8px;font-family:var(--f-deco,'Playfair Display SC',serif);font-weight:900;font-size:24px;line-height:1.1;text-transform:lowercase;color:var(--tt)}
-#mpb-t1:checked~.mpb-body .mpb-p1,#mpb-t2:checked~.mpb-body .mpb-p2,#mpb-t3:checked~.mpb-body .mpb-p3,#mpb-t4:checked~.mpb-body .mpb-p4{display:block}
-#mpb-t1:checked~.mpb-body [for="mpb-t1"],#mpb-t2:checked~.mpb-body [for="mpb-t2"],#mpb-t3:checked~.mpb-body [for="mpb-t3"],#mpb-t4:checked~.mpb-body [for="mpb-t4"]{background:var(--gd);color:var(--on)}
+
+/* ===== Pestañas ===== */
 #mpb-t1:checked~.mpb-body .mpb-p1{display:flex;flex-direction:column;height:100%}
+#mpb-t3:checked~.mpb-body .mpb-p3,#mpb-t4:checked~.mpb-body .mpb-p4,#mpb-t5:checked~.mpb-body .mpb-p5{display:block}
+:is(#mpb-cx,#mpb-c0,#mpb-c1,#mpb-c2,#mpb-c3,#mpb-c4,#mpb-c5,#mpb-c6,#mpb-c7,#mpb-c8,#mpb-c9,#mpb-c10,#mpb-c11):checked~.mpb-body .mpb-p2{display:flex;flex-direction:column;height:100%}
+#mpb-t1:checked~.mpb-body [for="mpb-t1"],#mpb-t3:checked~.mpb-body [for="mpb-t3"],#mpb-t4:checked~.mpb-body [for="mpb-t4"],#mpb-t5:checked~.mpb-body [for="mpb-t5"]{background:var(--gd);color:var(--on);border-color:transparent}
+:is(#mpb-cx,#mpb-c0,#mpb-c1,#mpb-c2,#mpb-c3,#mpb-c4,#mpb-c5,#mpb-c6,#mpb-c7,#mpb-c8,#mpb-c9,#mpb-c10,#mpb-c11):checked~.mpb-body [for="mpb-cx"]{background:var(--gd);color:var(--on);border-color:transparent}
 .mpb-p1 .mpb-h,.mpb-p1 .mpb-quote,.mpb-p1 .mpb-chips{flex:none}
 .mpb-p2{overflow:hidden}
-#mpb-t2:checked~.mpb-body .mpb-p2{display:flex;flex-direction:column;height:100%}
-:is(#mpb-cx,#mpb-c0,#mpb-c1,#mpb-c2,#mpb-c3,#mpb-c4,#mpb-c5,#mpb-c6,#mpb-c7,#mpb-c8,#mpb-c9,#mpb-c10,#mpb-c11):checked~.mpb-body .mpb-p2{display:flex;flex-direction:column;height:100%}
-:is(#mpb-cx,#mpb-c0,#mpb-c1,#mpb-c2,#mpb-c3,#mpb-c4,#mpb-c5,#mpb-c6,#mpb-c7,#mpb-c8,#mpb-c9,#mpb-c10,#mpb-c11):checked~.mpb-body [for="mpb-cx"]{background:var(--gd);color:var(--on)}
-#mpb-t5:checked~.mpb-body .mpb-p5{display:block}
-#mpb-t5:checked~.mpb-body [for="mpb-t5"]{background:var(--gd);color:var(--on);border-color:transparent}
 .mpb-p5 .mpb-list{max-height:165px}
 .mpb-p5 .mpb-list+.mpb-h{margin-top:14px}
 @media(max-width:560px){.mpb-body{flex-direction:column;padding:16px}.mpb-left{flex:none;width:210px;margin:0 auto}.mpb-ico{flex-basis:30%}.mpb-nav label{flex:1}}
@@ -86,8 +83,7 @@
 .mpb-p2 .mpb-h{flex:none}
 .mpb-chars{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;align-content:start;flex:none;max-height:140px;overflow-y:auto;padding:2px 4px 2px 2px}
 .mpb-ch{display:block;height:64px;border-radius:14px;overflow:hidden;border:2px solid var(--soft);cursor:pointer;transition:.2s}
-.mpb-ch img{opacity:.4;filter:grayscale(.6) brightness(.9);transition:.3s}
-.mpb-ch img{display:block;width:100%;height:100%;object-fit:cover}
+.mpb-ch img{display:block;width:100%;height:100%;object-fit:cover;opacity:.4;filter:grayscale(.6) brightness(.9);transition:.3s}
 .mpb-cards{flex:1;min-height:0;overflow-y:auto;margin-top:8px;padding-top:8px;border-top:1px dashed var(--ac)}
 .mpb-card{display:none}
 
